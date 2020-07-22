@@ -1,0 +1,63 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 1da8af01e27d8d3a26d2409144d12266b53ef7cb36cd5e77852ae2b0d4ddcea4
+
+name:           simple-datalog
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/simple-datalog#readme>
+homepage:       https://github.com/githubuser/simple-datalog#readme
+bug-reports:    https://github.com/githubuser/simple-datalog/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/simple-datalog
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_simple_datalog
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable simple-datalog-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_simple_datalog
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , simple-datalog
+  default-language: Haskell2010
+
+test-suite simple-datalog-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_simple_datalog
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , simple-datalog
+    , hspec
+  default-language: Haskell2010
